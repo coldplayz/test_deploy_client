@@ -6,7 +6,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const latentAPI = createApi({
   reducerPath: 'latentAPI',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:5000/api/v1',
+    baseUrl: `http://${process.env.BACKEND_HOST}/api/v1`,
     // baseUrl: 'http://localhost:3001/api/v1',
     credentials: 'include',
   }),

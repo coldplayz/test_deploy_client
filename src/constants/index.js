@@ -83,6 +83,6 @@ export const altHouses = [
   },
 ];
 
-export const rootUrl = 'http://localhost:5000/api/v1';
+export const rootUrl = `http://${process.env.BACKEND_HOST}/api/v1`;
 
 export const currency = currencyData;
