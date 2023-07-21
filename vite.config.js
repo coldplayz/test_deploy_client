@@ -9,5 +9,7 @@ export default defineConfig({
       '/api': `http://${process.env.BACKEND_HOST}`,
     },
     cors: true,
+    host: '0.0.0.0',
+    port: process.env.NODE_ENV === 'production' ? process.env.PORT : 3000,
   },
 });
