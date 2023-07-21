@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
+const port = process.env.NODE_ENV === 'production' ? process.env.BACKEND_PORT : '5000';
 const backend = process.env.NODE_ENV === 'production' ? process.env.BACKEND_HOST : 'localhost:5000';
 
 // making API calls using RTK Query
@@ -7,7 +8,7 @@ const backend = process.env.NODE_ENV === 'production' ? process.env.BACKEND_HOST
 export const latentAPI = createApi({
   reducerPath: 'latentAPI',
   baseQuery: fetchBaseQuery({
-    baseUrl: `http://${backend}/api/v1`,
+    baseUrl: `http://${backend}:${port}/api/v1`,
     // baseUrl: 'http://localhost:3001/api/v1',
     credentials: 'include',
   }),
