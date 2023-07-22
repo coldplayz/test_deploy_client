@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-// const port = process.env.NODE_ENV === 'production' ? process.env.BACKEND_PORT : '5000';
-const backend = process.env.NODE_ENV === 'production' ? process.env.BACKEND_HOST : 'localhost:5000';
+const port = process.env.NODE_ENV === 'production' ? process.env.BACKEND_PORT : '5000';
+const backend = process.env.NODE_ENV === 'production' ? `${process.env.BACKEND_HOST}:${port}` : 'localhost:5000';
 
 // making API calls using RTK Query
 
