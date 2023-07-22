@@ -6,9 +6,10 @@
     "node": "18.16.1"
   },
   "scripts": {
-    "start": "vite -l info -d true",
+    "start": "vite preview",
+    "//start": "vite -l info -d true",
     "dev": "vite",
-    "//build": "vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
