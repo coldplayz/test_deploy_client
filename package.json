@@ -6,7 +6,7 @@
     "node": "18.16.1"
   },
   "scripts": {
-    "start": "vite preview",
+    "start": "vite preview --port 3000 --logLevel info --debug true",
     "//start": "vite -l info -d true",
     "dev": "vite",
     "build": "vite build",
